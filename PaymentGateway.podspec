@@ -31,7 +31,7 @@ s.dependency 'PayPalCheckout', '~> 0.70.0'
 s.source_files = "PaymentGateway/**/*.{swift}"
 
 # 9
-s.resources = "PaymentGateway/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+# s.resources = "PaymentGateway/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
 s.swift_version = "4.2"
