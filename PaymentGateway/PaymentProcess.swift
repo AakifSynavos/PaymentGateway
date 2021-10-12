@@ -38,6 +38,7 @@ public class PaymentProcess
         case MobileMoney(phoneNumber: String)
     }
     
+    
     //Payment Callbacks
     func PaymentCallback(data: PaymentMethodSetupData, onComplete: @escaping ((Result<String, Error>)->Void))
     {
