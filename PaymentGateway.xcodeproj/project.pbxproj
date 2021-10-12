@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1201C223F6AAC14924D66F9B /* Pods_PaymentGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EAE1CCFF6D5CE13FA1BBA4 /* Pods_PaymentGateway.framework */; };
 		7C591613271578D5008C33C8 /* PaymentGateway.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C591612271578D5008C33C8 /* PaymentGateway.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C8875D627157D87009BDDFB /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8875D427157D87009BDDFB /* PaymentManager.swift */; };
+		7C8875D727157D87009BDDFB /* PaymentProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8875D527157D87009BDDFB /* PaymentProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,8 @@
 		67EAE1CCFF6D5CE13FA1BBA4 /* Pods_PaymentGateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentGateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C59160F271578D5008C33C8 /* PaymentGateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaymentGateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C591612271578D5008C33C8 /* PaymentGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentGateway.h; sourceTree = "<group>"; };
+		7C8875D427157D87009BDDFB /* PaymentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
+		7C8875D527157D87009BDDFB /* PaymentProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentProcess.swift; sourceTree = "<group>"; };
 		D1D9FEC4F8FC4E3B5F3B6B10 /* Pods-PaymentGateway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				7C591612271578D5008C33C8 /* PaymentGateway.h */,
+				7C8875D427157D87009BDDFB /* PaymentManager.swift */,
+				7C8875D527157D87009BDDFB /* PaymentProcess.swift */,
 			);
 			path = PaymentGateway;
 			sourceTree = "<group>";
@@ -118,6 +124,7 @@
 				TargetAttributes = {
 					7C59160E271578D5008C33C8 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -179,6 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8875D727157D87009BDDFB /* PaymentProcess.swift in Sources */,
+				7C8875D627157D87009BDDFB /* PaymentManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +321,7 @@
 			baseConfigurationReference = 04BD03D5F9D6E4297A7B94C9 /* Pods-PaymentGateway.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -336,6 +346,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -346,6 +357,7 @@
 			baseConfigurationReference = D1D9FEC4F8FC4E3B5F3B6B10 /* Pods-PaymentGateway.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
