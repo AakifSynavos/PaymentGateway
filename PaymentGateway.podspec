@@ -25,7 +25,7 @@ s.source = { :git => "https://github.com/AakifSynavos/PaymentGateway.git",
 
 # 7
 s.framework = "UIKit"
-s.dependency 'PayPalCheckout', '~> 0.70.0'
+s.dependency 'PayPalCheckout'
 
 # 8
 s.source_files = "PaymentGateway/**/*.{swift}"
