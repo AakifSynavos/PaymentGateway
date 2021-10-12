@@ -1,0 +1,6 @@
+framework module PaymentGateway {
+  umbrella header "PaymentGateway.h"
+
+  export *
+  module * { export * }
+}
