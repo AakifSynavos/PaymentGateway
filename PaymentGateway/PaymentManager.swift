@@ -9,22 +9,28 @@ import Foundation
 import UIKit
 import PayPalCheckout
 
+public protocol PaymentProcessProtocol
+{
+    func performpayment(onComplete: @escaping ((Result<String, Error>)->Void))
+}
+
 public class PaymentManager
 {
     public static var shared = PaymentManager()
     
-    public func test()
+    public func processPayment(object: PaymentProcessProtocol, onComplete: @escaping ((Result<String, Error>)->Void))
     {
-        print("testing framework")
+        object.performpayment { result in
+            onComplete(result)
+        }
     }
 }
 
-struct PaymentMethodModel
+struct PaymentModel
 {
-    var balance: Double
-    var description: String
-    var walletCurrency: String
-    var country : String
-    var phoneNumber: String
-    var clientID : String
+    var balance: Double?
+    var description: String?
+    var walletCurrency: String?
+    var country : String?
+    var phoneNumber: String?
 }

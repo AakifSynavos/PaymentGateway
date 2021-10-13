@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1201C223F6AAC14924D66F9B /* Pods_PaymentGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EAE1CCFF6D5CE13FA1BBA4 /* Pods_PaymentGateway.framework */; };
+		40E4F89E324A34B3E3C28F84 /* Pods_PaymentGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F7DC39DED9F8765EAC8A9C /* Pods_PaymentGateway.framework */; };
+		7C4459082716AD6100A9A85E /* PaypalPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4459072716AD6100A9A85E /* PaypalPayment.swift */; };
 		7C591613271578D5008C33C8 /* PaymentGateway.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C591612271578D5008C33C8 /* PaymentGateway.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C6615002716CCF10029D5FF /* HubtelPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6614FF2716CCF10029D5FF /* HubtelPayment.swift */; };
 		7C8875D627157D87009BDDFB /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8875D427157D87009BDDFB /* PaymentManager.swift */; };
-		7C8875D727157D87009BDDFB /* PaymentProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8875D527157D87009BDDFB /* PaymentProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04BD03D5F9D6E4297A7B94C9 /* Pods-PaymentGateway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.debug.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.debug.xcconfig"; sourceTree = "<group>"; };
-		67EAE1CCFF6D5CE13FA1BBA4 /* Pods_PaymentGateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentGateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F7DC39DED9F8765EAC8A9C /* Pods_PaymentGateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentGateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C40FE18A74879D948A9E31 /* Pods-PaymentGateway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.debug.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.debug.xcconfig"; sourceTree = "<group>"; };
+		7C4459072716AD6100A9A85E /* PaypalPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalPayment.swift; sourceTree = "<group>"; };
 		7C59160F271578D5008C33C8 /* PaymentGateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaymentGateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C591612271578D5008C33C8 /* PaymentGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentGateway.h; sourceTree = "<group>"; };
+		7C6614FF2716CCF10029D5FF /* HubtelPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubtelPayment.swift; sourceTree = "<group>"; };
 		7C8875D427157D87009BDDFB /* PaymentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
-		7C8875D527157D87009BDDFB /* PaymentProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentProcess.swift; sourceTree = "<group>"; };
-		D1D9FEC4F8FC4E3B5F3B6B10 /* Pods-PaymentGateway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.release.xcconfig"; sourceTree = "<group>"; };
+		D564F1629766C001B01A7AC2 /* Pods-PaymentGateway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,20 +30,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1201C223F6AAC14924D66F9B /* Pods_PaymentGateway.framework in Frameworks */,
+				40E4F89E324A34B3E3C28F84 /* Pods_PaymentGateway.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36F2D9342D96897B571490F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48F7DC39DED9F8765EAC8A9C /* Pods_PaymentGateway.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C591605271578D5008C33C8 = {
 			isa = PBXGroup;
 			children = (
 				7C591611271578D5008C33C8 /* PaymentGateway */,
 				7C591610271578D5008C33C8 /* Products */,
 				8C12F7E1416A94DB9444957E /* Pods */,
-				9C6E61DA3E856ABBC829291B /* Frameworks */,
+				36F2D9342D96897B571490F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +68,8 @@
 			children = (
 				7C591612271578D5008C33C8 /* PaymentGateway.h */,
 				7C8875D427157D87009BDDFB /* PaymentManager.swift */,
-				7C8875D527157D87009BDDFB /* PaymentProcess.swift */,
+				7C4459072716AD6100A9A85E /* PaypalPayment.swift */,
+				7C6614FF2716CCF10029D5FF /* HubtelPayment.swift */,
 			);
 			path = PaymentGateway;
 			sourceTree = "<group>";
@@ -66,18 +77,10 @@
 		8C12F7E1416A94DB9444957E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04BD03D5F9D6E4297A7B94C9 /* Pods-PaymentGateway.debug.xcconfig */,
-				D1D9FEC4F8FC4E3B5F3B6B10 /* Pods-PaymentGateway.release.xcconfig */,
+				64C40FE18A74879D948A9E31 /* Pods-PaymentGateway.debug.xcconfig */,
+				D564F1629766C001B01A7AC2 /* Pods-PaymentGateway.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		9C6E61DA3E856ABBC829291B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				67EAE1CCFF6D5CE13FA1BBA4 /* Pods_PaymentGateway.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,7 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C591616271578D5008C33C8 /* Build configuration list for PBXNativeTarget "PaymentGateway" */;
 			buildPhases = (
-				36400AF5E131E75B57E95673 /* [CP] Check Pods Manifest.lock */,
+				566E30D503CF71C72E5BE1C9 /* [CP] Check Pods Manifest.lock */,
 				7C59160A271578D5008C33C8 /* Headers */,
 				7C59160B271578D5008C33C8 /* Sources */,
 				7C59160C271578D5008C33C8 /* Frameworks */,
@@ -120,6 +123,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					7C59160E271578D5008C33C8 = {
@@ -157,7 +161,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36400AF5E131E75B57E95673 /* [CP] Check Pods Manifest.lock */ = {
+		566E30D503CF71C72E5BE1C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -186,7 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8875D727157D87009BDDFB /* PaymentProcess.swift in Sources */,
+				7C4459082716AD6100A9A85E /* PaypalPayment.swift in Sources */,
+				7C6615002716CCF10029D5FF /* HubtelPayment.swift in Sources */,
 				7C8875D627157D87009BDDFB /* PaymentManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +323,7 @@
 		};
 		7C591617271578D5008C33C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04BD03D5F9D6E4297A7B94C9 /* Pods-PaymentGateway.debug.xcconfig */;
+			baseConfigurationReference = 64C40FE18A74879D948A9E31 /* Pods-PaymentGateway.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -354,7 +359,7 @@
 		};
 		7C591618271578D5008C33C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1D9FEC4F8FC4E3B5F3B6B10 /* Pods-PaymentGateway.release.xcconfig */;
+			baseConfigurationReference = D564F1629766C001B01A7AC2 /* Pods-PaymentGateway.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
