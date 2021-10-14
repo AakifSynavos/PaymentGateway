@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import PayPalCheckout
 
-public protocol PaymentProcessProtocol
+public protocol PaymentMethod
 {
     func performpayment(onComplete: @escaping ((Result<String, Error>)->Void))
 }
@@ -18,15 +18,15 @@ public class PaymentManager
 {
     public static var shared = PaymentManager()
     
-    public func processPayment(object: PaymentProcessProtocol, onComplete: @escaping ((Result<String, Error>)->Void))
+    public func processPayment(with paymentMethod: PaymentMethod, onComplete: @escaping ((Result<String, Error>)->Void))
     {
-        object.performpayment { result in
+        paymentMethod.performpayment { result in
             onComplete(result)
         }
     }
 }
 
-struct PaymentModel
+struct PaymentInfo
 {
     var balance: Double?
     var description: String?

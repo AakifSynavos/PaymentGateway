@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 import PayPalCheckout
 
-public class PaypalPayment: PaymentProcessProtocol
+public class PaypalPayment: PaymentMethod
 {
     public static var shared = PaypalPayment()
+    public init() {}
     
     var clientId: String = ""
     var returnUrl: String = ""
@@ -30,5 +31,6 @@ public class PaypalPayment: PaymentProcessProtocol
     
     public func performpayment(onComplete: @escaping ((Result<String, Error>) -> Void)) {
         print("Processing Paypal Payment")
+        onComplete(.success("Successfull"))
     }
 }

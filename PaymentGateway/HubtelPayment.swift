@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-public class HubtelPayment: PaymentProcessProtocol
+public class HubtelPayment: PaymentMethod
 {
     public static var shared = HubtelPayment()
+    public init() {}
     
     var clientId: String = ""
     var returnUrl: String = ""
