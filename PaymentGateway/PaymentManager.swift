@@ -11,26 +11,33 @@ import PayPalCheckout
 
 public protocol PaymentMethod
 {
-    func performpayment(onComplete: @escaping ((Result<String, Error>)->Void))
+    func performpayment(model: PaymentInfo, onComplete: @escaping ((Result<String, Error>)->Void))
 }
 
 public class PaymentManager
 {
     public static var shared = PaymentManager()
     
-    public func processPayment(with paymentMethod: PaymentMethod, onComplete: @escaping ((Result<String, Error>)->Void))
+    public func processPayment(with paymentMethod: PaymentMethod, model: PaymentInfo, onComplete: @escaping ((Result<String, Error>)->Void))
     {
-        paymentMethod.performpayment { result in
+        paymentMethod.performpayment(model: model) { result in
             onComplete(result)
         }
     }
 }
 
-struct PaymentInfo
+public struct PaymentInfo
 {
-    var balance: Double?
+    var amount: Double?
+    var curreny: String?
+    var purpose: String?
     var description: String?
     var walletCurrency: String?
+    var balance: Double?
     var country : String?
     var phoneNumber: String?
+    
+    public init() {
+
+    }
 }
